@@ -1,0 +1,12 @@
+{
+	"code": 1,
+	"status": "ok",
+  "times":123456,
+	"data": [
+		{
+			"id": 0,
+			"url": "http://wapapi.zhizhu.video/",
+			"id": 0
+		},
+	]
+}
