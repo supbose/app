@@ -1,1 +1,1 @@
-{ "code": 1, "status": "ok", "data": [ { "id": 0, "api": "http://wapapi.shituyun.com/" }, { "id": 2, "api": "http://wapapi.zhizhu.video/" }, { "id": 3, "api": "http://wapapi3.shituyun.com/" } ] }
+{ "code": 1, "status": "ok", "data": [ { "id": 1, "api": "http://wapapi.shituyun.com/" }, { "id": 2, "api": "http://wapapi.zhizhu.video/" }, { "id": 3, "api": "http://wapapi3.shituyun.com/" } ] }
