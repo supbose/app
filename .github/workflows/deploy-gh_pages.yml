@@ -14,7 +14,7 @@ jobs:
       - name: install and build
         run: |        
           yarn
-          yarn run docs:build
+          yarn build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4  // 引用别人的部署插件
         with: 
