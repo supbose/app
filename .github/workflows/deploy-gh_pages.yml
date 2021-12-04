@@ -1,23 +1,20 @@
-name: 'github actions build and deploy gh-pages'
+name: Build and Deploy
 on: [push]
-  # push:
-  #   branches:
-  #     - json  // 基于 master 分支，如果你的分支不是这个，请切换
 jobs:
-  build: # 自定义名称
-    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1   
-        with: 
-          persist-credentials: false
-      - name: install and build
-        run: |        
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
           yarn
           yarn build
+
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4  // 引用别人的部署插件
-        with: 
-          ACCESS_TOKEN: ${{ secrets.APP_TOKEN }}   // 这里需要设置成你的 token
-          BRANCH: gh-pages
-          FOLDER: dist/
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          ACCESS_TOKEN: ${{ secrets.APP_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist/ # The folder the action should deploy.
